@@ -1,0 +1,45 @@
+{
+  "name": "@kukusa/directus-extension-bundle",
+  "version": "1.0.0",
+  "directus:extension": {
+    "host": "^10.7.1",
+    "type": "bundle",
+    "path": {
+      "app": "dist/app.js",
+      "api": "dist/api.js"
+    },
+    "entries": [
+      {
+        "type": "endpoint",
+        "name": "kukusa",
+        "source": "src/endpoints/kukusa/index.ts"
+      },
+      {
+        "type": "hook",
+        "name": "hooks",
+        "source": "src/hooks/index.ts"
+      }
+    ]
+  },
+  "description": "Kukusa extensions bundle",
+  "icon": "extension",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-custom-bundle"
+  ],
+  "files": [
+    "dist",
+    "!**/*.test.{d.ts,js}",
+    "!**/*.d.ts.map"
+  ],
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link",
+    "add": "directus-extension add"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "10.1.13"
+  }
+}
