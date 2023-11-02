@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@kukusa/base": ["packages/base/src/index.ts"]
+      "@kukusa/base": ["packages/base/src/index.ts"],
+      "@kukusa/ui": ["packages/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
